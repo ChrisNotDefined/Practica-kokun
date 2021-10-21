@@ -1,0 +1,24 @@
+<h1>{{ nombre }}</h1>
+
+<p>One way data binding</p>
+<dl>
+  <td>Nombre:</td>
+  <dd>{{ nombre }}</dd>
+
+  <td>Ataque:</td>
+  <dd>{{ ptsAtaque }}</dd>
+
+  <td>Función</td>
+  <dd>{{ obtenerNombrePuntos() }}</dd>
+
+  <td>mayusculas</td>
+  <dd>{{ nombreMayus }}</dd>
+</dl>
+
+<button (click)="cambiarNombre()">
+  Change Name
+</button>
+<button (click)="cambiarPts()">
+  Change Points
+</button>
+
