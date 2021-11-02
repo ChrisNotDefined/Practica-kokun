@@ -1,22 +1,16 @@
+import { CounterModule } from './counter/counter.module';
+import { PokemonsModule } from './pokemons/pokemons.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
-import { PokemonComponent } from './pokemons/pokemon/pokemon.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CounterComponent,
-    PokemonComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, PokemonsModule, CounterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

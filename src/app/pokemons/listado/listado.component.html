@@ -1,0 +1,18 @@
+<p>listado works!</p>
+
+<h1>{{ pokemons[0] }}</h1>
+
+<ul>
+  <li *ngFor="let pokemon of pokemons; let i = index">
+    {{ i + 1 }} => {{ pokemon }}
+  </li>
+</ul>
+
+
+<div>
+  <!-- Show the last deleted pokemon -->
+  <h4 *ngIf="lastDeleted; else noDeletion">Last deleted: {{ lastDeleted }}</h4>
+  <ng-template #noDeletion> No hay un pokemon eliminado </ng-template>
+</div>
+
+<button (click)="deletePokemon()">Delete item</button>
