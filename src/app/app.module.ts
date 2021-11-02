@@ -1,3 +1,4 @@
+import { SaiyajinModule } from './saiyajin/saiyajin.module';
 import { CounterModule } from './counter/counter.module';
 import { PokemonsModule } from './pokemons/pokemons.module';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,13 @@ import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PokemonsModule, CounterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PokemonsModule,
+    CounterModule,
+    SaiyajinModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

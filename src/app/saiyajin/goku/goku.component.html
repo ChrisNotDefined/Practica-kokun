@@ -1,0 +1,26 @@
+<div>Hola soy goku!!</div>
+
+<select #t (change)="onChange(t.value)">
+  <option *ngFor="let f of fases; let i = index" [value]="i.toString()">
+    {{ f.nombre }}
+  </option>
+</select>
+
+<div>
+  <h2>Fase:</h2>
+  <h3>{{ faseActual.nombre }}</h3>
+  <p>Goku ahora puede hacer: {{ faseActual.poder }}</p>
+  Color de cabello:
+  <div
+    class="colorIndicator"
+    [ngStyle]="{ 'background-color': faseActual.color }"
+  ></div>
+</div>
+
+<style>
+  .colorIndicator {
+    height: 10em;
+    width: 20em;
+    border: solid 2px brown;
+  }
+</style>
